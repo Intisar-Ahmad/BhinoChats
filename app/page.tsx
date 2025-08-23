@@ -34,7 +34,7 @@ const features = [
             },
           ]
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <main className="max-h-screen">
       <section className="relative isolate overflow-hidden bg-gradient-to-br pt-24 from-blue-900 via-indigo-800 to-purple-700 text-white h-screen">
@@ -97,6 +97,6 @@ export default function Home() {
 }
 
 export const metadata: Metadata = {
-  title: "Home- Bhinochats",
+  title: "Bhinochats",
   description: "Safe and Fast is right here",
 };

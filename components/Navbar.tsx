@@ -9,8 +9,10 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
+
 } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
+
 
 
 const navigationArray = [
@@ -36,7 +38,8 @@ const navigationArray = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
-  console.log(path);
+ 
+  if(path.split("/").length === 3 && path.split("/")[2] !== "") return null;
   return (
     <nav className={`bg-white shadow-lg ${isOpen?"rounded-lg":"rounded-full"} shadow-blue-500/40 border border-blue-500/40  fixed top-10 w-[80vw] left-[10vw] z-50 md:py-4 text-gray-900`}>
       <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8">
