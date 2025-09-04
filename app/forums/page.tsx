@@ -5,39 +5,49 @@ const topics = [
   {
     title: "Python",
     img: "/python.png",
-    desc: "Discussion about Python"
+    desc: "Discussion about Python",
+    slug: "python-chat"
   },
   {
     title: "JavaScript",
     img: "/javascript.png",
-    desc: "Talks around JavaScript, Node, and frameworks"
+    desc: "Talks around JavaScript, Node, and frameworks",
+    slug: "javascript-chat"
   },
   {
     title: "Cpp",
     img: "/cpp.png",
-    desc: "C++ algorithms, performance, and systems talk"
+    desc: "C++ algorithms, performance, and systems talk",
+    slug: "cpp-chat"
   },
   {
     title: "Web-Development",
     img: "/web-development.png",
-    desc: "Frontend, backend, and full-stack discussions"
+    desc: "Frontend, backend, and full-stack discussions",
+    slug: "web-development-chat"
   },
   {
     title: "Machine-Learning",
     img: "/machine-learning.png",
-    desc: "Models, data science, and AI-related topics"
+    desc: "Models, data science, and AI-related topics",
+    slug: "machine-learning-chat"
   },
   {
     title: "DevOps",
     img: "/devops.png",
-    desc: "CI/CD, Docker, Kubernetes, and infrastructure"
+    desc: "CI/CD, Docker, Kubernetes, and infrastructure",
+    slug: "devops-chat"
   },
   {
     title: "Cybersecurity",
     img: "/cybersecurity.png",
-    desc: "Security best practices, hacking, and defense"
+    desc: "Security best practices, hacking, and defense",
+    slug: "cybersecurity-chat"
   }
 ];
+
+
+
 
 const page = () => {
   return (
@@ -69,7 +79,7 @@ const page = () => {
         className='object-cover'
         />
        </div>
-        <h3 className="text-xl font-semibold text-white cursor-pointer"><Link href={`/forums/${topic.title.toLowerCase()}`}>
+        <h3 className="text-xl font-semibold text-white cursor-pointer"><Link href={`/forums/${topic.slug}`}>
         {topic.title}
         </Link></h3>
         <p className="text-white/70 mt-2">{topic.desc}</p>
@@ -77,16 +87,7 @@ const page = () => {
     ))}
   </div>
 
-    <footer className='w-full fixed bottom-0 flex justify-center items-center '>
-          <Image
-    src={'/addIcon.png'}
-    height={50}
-    width={50}
-    alt='Create Forum'
-    className=' bg-white  rounded-full cursor-pointer '
-    >
-    </Image>
-    </footer>
+  
     
 </main>
 

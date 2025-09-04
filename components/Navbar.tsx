@@ -29,10 +29,7 @@ const navigationArray = [
     name:"Forums",
     href:"/forums"
   },
-  {
-    name:"Chat Directly",
-    href:"/chat"
-  },
+
 ]
 
 const Navbar = () => {
@@ -101,12 +98,6 @@ const Navbar = () => {
           </Link>
           <Link href="/forums" className="block font-medium hover:text-blue-600">
          Forums
-          </Link>
-          <Link
-            href="/chat"
-            className="block font-medium hover:text-blue-600"
-          >
-            Chat Directly
           </Link>
           <Link
             href="/about"
